@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
 })
 
 export class EmpleadoComponent{
-    public titulo = 'Titulo del Componente Empleado';
+    public titulo = 'Titulo del Componente Empleado: ';
 }
