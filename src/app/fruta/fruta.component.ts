@@ -15,5 +15,5 @@ export class FrutaComponent{
     public trabajadore:Array<any> = ['Ingeniero', 44, 'Programador'];
     comodin:any = 'Si'
 
-    constructor(){}
+    constructor(){}   
 }
