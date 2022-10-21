@@ -23,5 +23,6 @@ export class EmpleadoComponent{
 
     ngOnInit(){
         console.log(this.empleado);
+        console.log(this.trabajadores);
     }
 }
