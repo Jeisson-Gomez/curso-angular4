@@ -1,17 +1,27 @@
 <h1 style="color: blue;">
     {{ titulo }}
 </h1>
-<strong>Empleado Estrella: </strong>
-<ul>
-    <li>{{ empleado.nombre }}</li>
-    <li>{{ empleado.edad }}</li>
-    <li>{{ empleado.cargo }} </li>
-    <li>{{ empleado.contratado }}</li>
-</ul>
 
-<ul>
-    <li>{{ trabajadores[0].nombre }}</li>
-    <li>{{ trabajadores[0].edad }}</li>
-    <li>{{ trabajadores[0].cargo }}</li>
-    <li>{{ trabajadores[0].contratado }}</li>
-</ul>
+<strong>Empleado Estrella: </strong>
+<br>
+<br>
+
+<div  *ngIf="trabajador_externo == true">
+    <button (click)="cambiarExterno(false)">Mostrar Empleado</button>
+    <ul>
+        <li>{{ trabajadores[0].nombre }}</li>
+        <li>{{ trabajadores[0].edad }}</li>
+        <li>{{ trabajadores[0].cargo }}</li>
+        <li>{{ trabajadores[0].contratado }}</li>
+    </ul>
+</div>
+
+<div *ngIf="trabajador_externo == false">
+    <button (click)="cambiarExterno(true)">Mostrar Tabajador</button>
+    <ul>
+        <li>{{ empleado.nombre }}</li>
+        <li>{{ empleado.edad }}</li>
+        <li>{{ empleado.cargo }} </li>
+        <li>{{ empleado.contratado }}</li>
+    </ul>
+</div>
