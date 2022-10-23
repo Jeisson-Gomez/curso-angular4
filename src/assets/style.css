@@ -1,11 +1,24 @@
-h1{
-    color: red;
+.FondoAzul{
+    background: blue !important;
+}
+
+.FondoRojo{
+    background: red !important;
+}
+
+.letraGrande{
+    font-size: 20px;
+}
+
+.activado{
+    font-weight: bold;
+    background: skyblue;
+}
+
+h4{
+    color: blue;
 }
 
 strong{
-    color: blue;
-}
-
-h3{
-    color: blue;
+    color: red;
 }
