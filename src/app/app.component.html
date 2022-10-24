@@ -3,5 +3,31 @@
 </h2>
 
 <hr>
+<nav>
+<a [routerLink]="['Pagina-Pricipal']" [routerLinkActive]="['activado']">
+  Home
+</a>
+-
+<a [routerLink]="['Coches']" [routerLinkActive]="['activado']">
+  Coches
+</a>
+-
+<a [routerLink]="['Contacto']" [routerLinkActive]="['activado']">
+  Contacto
+</a>
+-
+<a [routerLink]="['Empleado']" [routerLinkActive]="['activado']">
+  Empleado
+</a>
+-
+<a [routerLink]="['Fruta']" [routerLinkActive]="['activado']">
+  Fruta
+</a>
+-
+<a [routerLink]="['Plantillas']" [routerLinkActive]="['activado']">
+  Plantilla
+</a>
+<hr>
 <!--<fruta></fruta>-->
-<empleado-tag></empleado-tag>
+<!--<empleado-tag></empleado-tag>-->
+<router-outlet></router-outlet>
