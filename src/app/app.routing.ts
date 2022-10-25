@@ -1,7 +1,8 @@
-import { ModuleWithProviders } from '@angular/core';
+import { Component, ModuleWithProviders } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 //Importar Componente
+import { ContactoComponent } from './contacto/contacto.component';
 import { EmpleadoComponent } from './empleado/empleado.component';
 import { FrutaComponent } from './fruta/fruta.component';
 import { HomeComponent } from './home/home.component';
