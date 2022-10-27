@@ -25,4 +25,8 @@ export class HomeComponent{
         this._ropaService.addRopa(this.prenda_a_guardar);
         //this.prenda_a_guardar = null;
       }
+
+      eliminarPrenda(index:number){
+        this._ropaService.deleteRopa(index);
+      }
 }

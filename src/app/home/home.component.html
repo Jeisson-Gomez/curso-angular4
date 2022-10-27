@@ -6,12 +6,14 @@
 <button (click)="guardarPrenda()">Añadir de prenda de ropa</button>
   
 <p *ngIf="prenda_a_guardar">
-    La prenda de prendas de ropa es: <strong>{{ prenda_a_guardar }}</strong>
+    La prenda de prendas de ropa es:
+    <strong>{{ prenda_a_guardar }}</strong>
 </p>
 <br>
 <h3>Listado de prendas de ropa</h3>
 <ul>
     <li *ngFor="let prenda of listado_ropa; let i = index">
         {{ prenda }}
+        <button (click)="eliminarPrenda(i)">Elimenar Ropa</button>
     </li>
 </ul>
