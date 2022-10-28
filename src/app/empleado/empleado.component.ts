@@ -40,5 +40,4 @@ export class EmpleadoComponent{
     logColorSeleccionado(){
         console.log(this.color_seleccionado);
     }
-    
 }

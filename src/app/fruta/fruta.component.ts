@@ -37,9 +37,7 @@ export class FrutaComponent{
 
             console.log("Dentro del If: " + uno + " " + dos);
         }
-
         console.log("Dentro del If: " + uno + " " + dos);
-
     }
 
     cambiarNombre(){
