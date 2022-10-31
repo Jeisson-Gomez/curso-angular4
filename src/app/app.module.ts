@@ -4,7 +4,7 @@ import { HttpModule } from '@angular/http';
 import { NgModule } from '@angular/core';
 import { routing, appRoutingProviders } from './app.routing';
 
-//Componentes
+//Lo Componentes
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ContactoComponent } from './contacto/contacto.component'
@@ -12,13 +12,17 @@ import { EmpleadoComponent } from './empleado/empleado.component';
 import { FrutaComponent } from './fruta/fruta.component';
 import { HomeComponent } from './home/home.component';
 
+//Los Pipes
+import { ConversorPipe } from './pipes/conversor.pipe';
+
 @NgModule({
   declarations: [
     AppComponent,
     ContactoComponent,
     EmpleadoComponent,
     FrutaComponent,
-    HomeComponent
+    HomeComponent,
+    ConversorPipe
   ],
   imports: [
     BrowserModule,
