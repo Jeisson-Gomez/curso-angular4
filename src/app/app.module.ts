@@ -7,6 +7,7 @@ import { routing, appRoutingProviders } from './app.routing';
 //Lo Componentes
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { CochesComponent } from './coches/coches.component';
 import { ContactoComponent } from './contacto/contacto.component'
 import { EmpleadoComponent } from './empleado/empleado.component';
 import { FrutaComponent } from './fruta/fruta.component';
@@ -18,6 +19,7 @@ import { ConversorPipe } from './pipes/conversor.pipe';
 @NgModule({
   declarations: [
     AppComponent,
+    CochesComponent,
     ContactoComponent,
     EmpleadoComponent,
     FrutaComponent,
