@@ -6,4 +6,10 @@ import { Coche } from "./coche";
     templateUrl: './coches.component.html'
 })
 
-export class CochesComponent{}
+export class CochesComponent{
+    public coche: Coche;
+
+    constructor(){
+        this.coche = new Coche("", "", "");
+    }
+}
