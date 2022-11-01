@@ -2,32 +2,63 @@
     <strong>Componente de coches</strong>
 </h1>
 
-<form #formCoche="ngForm" (ngSubmit)="onSubmit()">
-    <p>
-        <label for="">Nombre: </label>
-        <input type="text" name="nombre" #nombre="ngModel" [(ngModel)]="coche.nombre" required>
-        <span *ngIf="nombre.touched && !nombre.valid">
-            El nombre del coche es Incorrecto!!
-        </span>
-    </p>
+<style>
+    div{
+        float: left;
+    }
 
-    <p>
-        <label for="">Caballaje: </label>
-        <input type="text" name="caballaje" #caballaje="ngModel" [(ngModel)]="coche.caballaje"
-        required pattern="[0-9]+">
-        <span *ngIf="caballaje.touched && !caballaje.valid">
-            El caballaje del coche es Incorrecto!!
-        </span>
-    </p>
+    .listado{
+        margin-left: 100px;
+    }
 
-    <p>
-        <label for="">Color: </label>
-        <input type="text" name="color" #color="ngModel" [(ngModel)]="coche.color"
-        required pattern="[a-zA-Z#]+">
-        <span *ngIf="color.touched && !color.valid">
-            El color del coche es Incorrecto!!
-        </span>
-    </p>
+    form{
+        width: 300px;
+    }
 
-    <input type="submit" value="Guardar">
-</form>
+    input[type="text"], span{
+        display: block;
+        width: 250px;
+    }
+</style>
+
+<div>
+    <form #formCoche="ngForm" (ngSubmit)="onSubmit()">
+        <p>
+            <label for="">Nombre: </label>
+            <input type="text" name="nombre" #nombre="ngModel" [(ngModel)]="coche.nombre" required>
+            <span *ngIf="nombre.touched && !nombre.valid">
+                El nombre del coche es Incorrecto!!
+            </span>
+        </p>
+    
+        <p>
+            <label for="">Caballaje: </label>
+            <input type="text" name="caballaje" #caballaje="ngModel" [(ngModel)]="coche.caballaje"
+            required pattern="[0-9]+">
+            <span *ngIf="caballaje.touched && !caballaje.valid">
+                El caballaje del coche es Incorrecto!!
+            </span>
+        </p>
+    
+        <p>
+            <label for="">Color: </label>
+            <input type="text" name="color" #color="ngModel" [(ngModel)]="coche.color"
+            required pattern="[a-zA-Z#]+">
+            <span *ngIf="color.touched && !color.valid">
+                El color del coche es Incorrecto!!
+            </span>
+        </p>
+    
+        <input type="submit" value="Guardar" [disabled]="!formCoche.form.valid">
+    </form>
+</div>
+
+<div class="Listado">
+    <h4>Listado de Coches</h4>
+    
+    <ul>
+        <li *ngFor="let coche of coches">
+            {{ coche.nombre }} - {{ coche.caballaje }} - {{ coche.color }}
+        </li>
+    </ul>
+</div>
