@@ -12,4 +12,8 @@ export class CochesComponent{
     constructor(){
         this.coche = new Coche("", "", "");
     }
+
+    onSubmit(){
+        console.log(this.coche);
+    }
 }
