@@ -22,7 +22,7 @@
 </style>
 
 <div>
-    <form #formCoche="ngForm" (ngSubmit)="onSubmit()">
+    <form #formCoche="ngForm" (ngSubmit)="onSubmit(); formCoche.reset();">
         <p>
             <label for="">Nombre: </label>
             <input type="text" name="nombre" #nombre="ngModel" [(ngModel)]="coche.nombre" required>
