@@ -11,6 +11,7 @@ import { PeticionesSrvice } from "../services/peticiones.service";
 export class CochesComponent{
     public coche: Coche;
     public coches:Array<Coche>;
+    public articulos: any;
 
     constructor(
         private _peticionesService: PeticionesSrvice
@@ -23,7 +24,15 @@ export class CochesComponent{
     }
 
     ngOnInit(){
-        console.log(this._peticionesService.getPrueba());
+        this._peticionesService.getArticulos().subscribe(
+            result => {
+                console.log(result);
+            },
+            error => {
+                var errorMessage = <any>error;
+                console.log(errorMessage);
+            }
+        );
     }
 
     onSubmit(){
