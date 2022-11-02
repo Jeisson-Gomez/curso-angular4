@@ -6,7 +6,7 @@ import { map } from 'rxjs/operators';
 
 @Injectable()
 
-export class PeticionesSrvice{
+export class PeticionesService{
     public url: string;
 
     constructor(private _http:Http){

@@ -1,11 +1,11 @@
 import { Component } from "@angular/core";
 import { Coche } from "./coche";
-import { PeticionesSrvice } from "../services/peticiones.service";
+import { PeticionesService } from "../services/peticiones.service";
 
 @Component({
     selector: 'coches',
     templateUrl: './coches.component.html',
-    providers: [PeticionesSrvice]
+    providers: [PeticionesService]
 })
 
 export class CochesComponent{
@@ -14,7 +14,7 @@ export class CochesComponent{
     public articulos: any;
 
     constructor(
-        private _peticionesService: PeticionesSrvice
+        private _peticionesService: PeticionesService
     ){
         this.coche = new Coche("", "", "");
         this.coches = [
