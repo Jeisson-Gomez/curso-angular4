@@ -11,12 +11,12 @@ export class ContactoComponent{
     public parametro: any;
 
     constructor(
-        private _rotue: ActivatedRoute,
+        private _route: ActivatedRoute,
         private _router: Router
     ){}
 
     ngOnInit(){
-        this._rotue.params.forEach((params: Params) =>{
+        this._route.params.forEach((params: Params) =>{
             this.parametro = params['page'];
         });
     }
