@@ -11,6 +11,6 @@ export class plantillasComponent{
 
   constructor(){
     this.titulo = "Plantillas ngTemplate en Angular";
-    this.administrador = true;
+    this.administrador = false;
   }
 }

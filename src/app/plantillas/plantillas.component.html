@@ -1,3 +1,15 @@
 <h4>
   {{ titulo }}
 </h4>
+
+<div *ngIf="administrador">
+  <strong style="color: darkblue;">
+    Eres el administrador de la Webapp
+  </strong>
+</div>
+
+<div *ngIf="!administrador">
+  <strong style="background: red; color: blue;">
+    No eres el administrador de la Webapp
+  </strong>
+</div>
